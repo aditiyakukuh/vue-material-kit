@@ -1,6 +1,13 @@
 <script setup>
 import ExampleCard from "../Components/ExampleCard.vue";
 import MaterialBadge from "../../../components/MaterialBadge.vue";
+import { onMounted } from "vue";
+onMounted(() => {
+  const el = document.getElementById("online-shop");
+  el.addEventListener("click", () => {
+    window.location.href = "https://aditiyak.site/online-shop";
+  });
+});
 
 defineProps({
   data: {
@@ -86,7 +93,7 @@ export default {
           <div :class="`row ${index != 0 ? 'mt-3' : ''}`">
             <div
               class="col-md-4 mt-md-0"
-              v-for="{ image, title, subtitle, route, pro } in items"
+              v-for="{ image, title, subtitle, route, pro, id } in items"
               :key="title"
             >
               <ExampleCard
@@ -96,6 +103,7 @@ export default {
                 :subtitle="subtitle"
                 :route="route"
                 :pro="pro"
+                :id="id"
               />
             </div>
           </div>
