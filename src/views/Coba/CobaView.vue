@@ -2,7 +2,7 @@
 import NavbarDarkCustom from "../../layouts/sections/navigation/navbars/components/NavbarDarkCustom.vue";
 import HeaderOneCustom from "../../layouts/sections/page-sections/page-headers/components/HeaderOneCustom.vue";
 import PresentationExampleCustomVue from "../Presentation/Sections/PresentationExampleCustom.vue";
-import FooterDefault from "../../examples/footers/FooterDefault.vue";
+import FooterDefaultCustom from "../../examples/footers/FooterDefaultCustom.vue";
 import data from "../Presentation/Sections/Data/designBlocksData.js";
 </script>
 <template>
@@ -10,15 +10,14 @@ import data from "../Presentation/Sections/Data/designBlocksData.js";
     <NavbarDarkCustom />
   </div>
   <HeaderOneCustom />
-  <div class="container mb-5">
+  <div class="container mb-5" id="startdong">
     <div class="row">
       <div class="col-lg-12 mx-auto">
-        <h1 class="mt-5">yakali</h1>
         <PresentationExampleCustomVue :data="data" />
       </div>
     </div>
   </div>
-  <FooterDefault />
+  <FooterDefaultCustom />
 </template>
 <style>
 .navbar-fixed-top {

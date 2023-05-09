@@ -21,6 +21,11 @@ onMounted(() => {
         console.error("Error playing video:", error);
       });
   });
+
+  const el = document.getElementById("start-button");
+  el.addEventListener("click", () => {
+    window.location.href = "#startdong";
+  });
 });
 </script>
 <template>
@@ -111,7 +116,7 @@ onMounted(() => {
               What do you want to know? have a nice day!
             </p>
             <div class="buttons">
-              <MaterialButton color="white" class="mt-4"
+              <MaterialButton id="start-button" color="white" class="mt-4"
                 >Get Started</MaterialButton
               >
               <MaterialButton color="none" class="text-white shadow-none mt-4"
